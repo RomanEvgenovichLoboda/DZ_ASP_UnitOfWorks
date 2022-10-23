@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PZ_ASP_UnitOfWorks.Models.User;
 
 namespace PZ_ASP_UnitOfWorks.Controllers
 {
@@ -7,10 +6,10 @@ namespace PZ_ASP_UnitOfWorks.Controllers
     [Route("[controller]")]
     public class UserController:Controller
     {
-        UserWork work;
+        Models.User.UserWork work;
         public UserController()
         {
-            work = new UserWork();
+            work = new Models.User.UserWork();
         }
         [HttpGet("GetAllNotes")]
         public IEnumerable<object> GetAll() => work.UserRepo.GetAll();

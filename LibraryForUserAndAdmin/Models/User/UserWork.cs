@@ -2,8 +2,8 @@
 {
     public class UserWork : IDisposable
     {
-        HostContext hostContext;
-        UserRepo userRepo;
+        protected HostContext hostContext;
+        protected UserRepo userRepo;
         public UserRepo UserRepo
         {
             get

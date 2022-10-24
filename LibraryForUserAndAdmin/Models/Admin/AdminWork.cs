@@ -2,22 +2,16 @@
 
 namespace PZ_ASP_UnitOfWorks.Models.Admin
 {
-    public class AdminWork : IDisposable
+    public class AdminWork : UserWork
     {
-        HostContext hostContext;
-        AdminRepo adminRepo;
         public AdminRepo AdminRepo
         {
             get
             {
-                if (adminRepo == null) adminRepo = new AdminRepo(hostContext);
-                return adminRepo;
+                if (userRepo == null) userRepo = new AdminRepo(hostContext);
+                return (AdminRepo)userRepo;
             }
         }
-        public AdminWork()
-        {
-            hostContext = new HostContext();
-        }
-        public void Dispose() => GC.SuppressFinalize(this);
+        public AdminWork() : base() { }
     }
 }

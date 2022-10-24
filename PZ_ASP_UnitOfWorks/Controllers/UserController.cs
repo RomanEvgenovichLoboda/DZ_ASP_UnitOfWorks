@@ -6,7 +6,7 @@ namespace PZ_ASP_UnitOfWorks.Controllers
     [Route("[controller]")]
     public class UserController:Controller
     {
-        Models.User.UserWork work;
+       protected Models.User.UserWork work;
         public UserController()
         {
             work = new Models.User.UserWork();

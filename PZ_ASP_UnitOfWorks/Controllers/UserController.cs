@@ -4,7 +4,7 @@ namespace PZ_ASP_UnitOfWorks.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UserController:Controller
+    public class UserController : Controller
     {
        protected Models.User.UserWork work;
         public UserController()

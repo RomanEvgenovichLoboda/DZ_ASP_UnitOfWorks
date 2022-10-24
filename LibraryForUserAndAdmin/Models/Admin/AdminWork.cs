@@ -4,7 +4,7 @@ namespace PZ_ASP_UnitOfWorks.Models.Admin
 {
     public class AdminWork : UserWork
     {
-        public AdminRepo AdminRepo
+        new public AdminRepo UserRepo
         {
             get
             {
